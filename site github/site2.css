@@ -1,0 +1,176 @@
+
+
+body {
+    background-color: #0d0d0d;  
+        overflow-x: hidden; 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+}
+
+
+.Haut {     /*bannière qui sert de fond en haut*/
+    margin-left: 0px;  
+    display: flex;
+    justify-content: right;   /*pour la mettre au milieu a la base, mais elle défile au final*/
+    background-image: url("jujutsu.png");
+    background-color: rgb(0, 0, 0,);  
+    height: 220px;
+    width: 100%;       /*taille, bannière fais sur photoshop*/
+    animation: slide 50s linear infinite;  /*vu sur un site internet, pour que la bannière défile à l'infini*/
+}
+
+
+
+@keyframes slide {   /*pour que le background glisse (animation)*/
+    0% {
+        background-position: 100% 0;  /*commence à l'extreme gauche*/
+    }
+    100% {
+        background-position: -100% 0;  /*finit à l'extrême droite*/
+    }
+}
+
+
+#image2{   /*logo "manga vision"*/
+        width: 290px;
+        position: absolute;
+        margin-top: 0%;
+        top: 0%;
+        left: 0%;   /*toutes les fonctions pour pouvoir le placer en haut a gauche */
+    }
+
+
+    .barre {        /*barre de recherche */
+        position: absolute;
+        color: rgb(8, 8, 8);
+        top: 100px;
+        right: 30px;   /*µposition de la barre*/
+        size-adjust: 40%;  /*sa taille*/
+        opacity: 0.8;  /*son opacité (pour voir le fond) */
+    }
+
+    input[type="text"] {        /*pour saisir des données ( dans ce cas un texte)*/
+        padding: 15px;      /* taille du bloc du texte */
+        font-size: 16px;   
+        border: solid 1px #fff;         /* Bordure blanche*/
+        border-radius: 5px 0 0 5px;             /* Bordures arrondies pour les coins gauches seulement */
+        outline: none;               /* Retire l'effet de contours */
+        width: 250px;               /* Largeur de la barre */
+        background-color: black;    
+        color: white;       
+    }
+    
+    button { 
+        padding: 15px 15px;             /* taille du bouton de recherhche */
+        background-color: #333;     
+        font-size: 15px;         
+        border: solid 1px #fff;        
+        border-radius: 0 5px 5px 0;     /* Bordures arrondies pour les coins droites seulement */
+        cursor: pointer;           /* Changement du curseur à pointer lorsqu'on survole la souris */
+    }
+    
+    button:hover { 
+        background-color: #555; /* Couleur de fond plus claire au survol de la souris */
+    }
+
+
+    .scan {
+        font-size: 200%;
+        color: white;
+        position: absolute;
+        top: 250px;
+        left: 30px;
+        
+    }
+
+    .nom {
+        font-size: 150%;
+        color: white;
+        position: absolute;
+        top: 290px;
+        left: 176px;
+    }
+
+    .page {
+        font-size: 150%;
+        color: white;
+        position: absolute;
+        top: 315px;
+        left: 176px;
+    }
+
+    .manga {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0; 
+        margin-top: 150px;      /* pour que l'image comment pas en tout en haut de la banniere*/
+        padding: 20px; 
+    }
+    
+    .bloc {        
+        margin: 0; 
+        display: flex; 
+        justify-content: center; 
+    }
+
+    .image {
+        width: 600px; 
+        height: auto; 
+        max-height: 1000px; 
+    }
+
+
+    .footer {
+        background-color: #222;
+        color: white;
+        padding: 40px;
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    .footer p {
+        margin: 0px 0;
+    }
+    
+    .footer a {
+        color: rgb(0, 162, 255);
+        text-decoration: none;
+    }
+    
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+
+    
+
+    @media (max-width: 768px) {
+        *{
+            overflow-x: hidden; 
+        }
+        #image2 {
+            width: 200px;
+        }
+    
+        .scan, .nom, .page {
+            font-size: 120%;
+        }
+    
+        input[type="text"] {
+            width: 200px;
+        }
+    
+        .manga {
+            margin-top: 100px;
+        }
+    
+        .image {
+            width: 400px;
+        }
+    }
+    
+    
